@@ -1,0 +1,60 @@
+@layer reset, base, componentes;
+
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+@layer base {
+  body {
+    font-family: var(--fuente-base);
+    font-size: var(--texto-base);
+    line-height: 1.6;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    min-height: 100dvh;
+  }
+
+  h1 {
+    font-size: clamp(1.75rem, 3.5vw + 1rem, 2.75rem);
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: var(--espacio-2);
+  }
+
+  p {
+    max-width: 65ch;
+  }
+
+  a {
+    color: var(--color-acento);
+    text-underline-offset: 0.2em;
+  }
+
+  a:hover {
+    opacity: 0.85;
+  }
+
+  button,
+  input {
+    font: inherit;
+    color: inherit;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-acento);
+    outline-offset: 3px;
+  }
+}
